@@ -1,49 +1,32 @@
-# BDD
-Python Test - BDD
+# BDD –Uppgift
+### vecka 13
 
+Den här uppgiften går genom BDD med Gherkin och Behave. Uppgiften består av två
+delar:
 
-#  Del 1 -----------------------------------------
-Du ska beskriva och testa ett enkelt system för en webbutik som säljer böcker. Systemet
-har följande enkla krav:
+- Del 1 är enklare, och du kan klara av att lösa den med kunskaperna vi gick genom
+på lektionen.
 
-- Användaren kan lägga böcker i en varukorg
-- Användaren kan ta bort böcker från varukorgen
-- Varukorgen visar alltid aktuell summa och antal böcker
-- Om användaren försöker lägga en bok som redan finns i varukorgen ska antalet
-av just den boken öka istället för att skapa en ny rad
-- Det skall gå att tömma varukorgen helt
+- Del 2 är mer utmanande och kräver mer av dig, du behöver med stor sannolikhet
+också göra egen research för att lösa uppgiften.
 
-### Uppgiften:
-1. Skriv tydliga scenarier i Gherkin som beskriver ovanstående krav. Använd gärna
-Scenario Outline där det passar.
-2. Implementera step-filerna i Python med hjälp av Behave.
-3. Din Python-kod behöver inte kopplas mot en riktig webbsida eller databas, det
-räcker med att simulera funktionaliteten med hjälp av enklare Python-klasser
+### Inlämning
+Inlämningen gör du genom ett repository skapat på github.com på ditt eget konto. Du
+lämnar in en länk till ditt repository. Se till att repositoryt innehåller:
+- Alla .feature filer med Scenarier
+- Alla steps filer med Python koden
+- En kort README-fil där du förklarar:
 
-## Del 2 -----------------------------------------
-Här kommer du behöva tänka till och forska på egen hand. Du skall vidareutveckla
-uppgiften till att inkludera ytterligare funktionalitet samt några svårare testfall.
-Extra krav som skall implementeras (du skall göra minst tre av dem):
-- Rabattfunktion. Om användaren köper fler än tre böcker skall hon få 10% rabatt
-på hela kundkorgen. Testa flera olika fall, inklusive värden som är osannolika som
--1000 och 64000 böcker.
-- Lagerhantering. Varje bok skall ha en lagerstatus. Om användaren försöker köpa
-fler exemplar än vad som finns i lagret, visas ett tydligt meddelande och antalet
-begränsas till lagersaldot.
-- Login. Användaren måste logga in med giltiga användaruppgifter innan köpet kan
-genomföras. Testa både lyckade och misslyckade inloggingar med Scenario
-Outline.
-- Beställningshistorik. Användaren skall kunna se historiken över sina tidigare
-beställningar. Testa att beställningar visas korrekt.
-- Kvitto. När en beställning är genomförd skickas ett kvitto automatiskt via e-post
-(detta simulerar du i Python, du behöver inte skicka mailet på riktigt). Testa att
-kvittot skapas och skickas iväg.
+* Hur du löste uppgiften (inklusive vilka extrafunktioner du valde och varför – om du valde några)
+* Vad som var lätt och vad som var svårt
+* Vilka resurser du använde för att lösa del 2, om du löste den.
 
-### Uppgiften:
-1. Gör research online för att hitta bra sätt att implementera funktionerna i Python,
-utan att använda komplex webbteknik som ramverk och liknande.
-2. Skriv tydliga och underhållbara scenarier i Gherkin som testar varje vald
-extrafunktion.
-3. Implementera steps-definitionerna i Behave och Python. Använd klasser,
-funktioner och variabler för att simulera funktionerna.
-4. Se till att testfallen fungerar och kör utan fel med kommandot behave.
+### Bedömning
+Uppgiften betygsätts inte, men du måste ändå klara av en acceptabel nivå där du
+bedöms utifrån följande kriterier:
+- Tydlighet och kvalitet på Gherkin-scenarier (förståeligt och enkelt språk)
+- Att du använt Scenario Outline och tags där det är lämpligt
+- Kvaliteten på Python-koden och hur väl du kopplar Gherkin till kod via Behave
+- Förmåga att självständigt forska och implementera extra funktioner
+- Dokumentation (README-filen) som beskriver din lösning tydligt och
+reflekterande
