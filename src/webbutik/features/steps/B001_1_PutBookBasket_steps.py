@@ -8,15 +8,15 @@ def Add_Basket (book, item_nr):
     correct_item_nr = bookqt
     return book == correct_book and  item_nr == correct_item_nr
 
-
-@given(u'user has chosen a book')
+# -----------------------------------------------------
+@given(u'User chooses a book')
 def step_chosen_book(context):
     context_book= bookname
     context_qt = bookqt
     print(f"User has chosen book {context_book}")
 
 
-@when(u'use puts the book in the basket')
+@when(u'User puts the book in the basket')
 def step_puts_book_basket(context):
     context_book= bookname
     context_qt = bookqt
@@ -27,7 +27,7 @@ def step_puts_book_basket(context):
 # "a" - Append - will append to the end of the file
 # "w" - Write - will overwrite any existing content
 
-@then(u'the basket shows the book in the list')
+@then(u'Basket shows the book in the list')
 def step_show_basket(context):
     # with open('string_data.json', 'w') as file:
     #     file.write(json_string)
