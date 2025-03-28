@@ -1,4 +1,4 @@
-#- F002 - Användaren kan ta bort böcker från varukorgen
+#- F001_2 ) Användaren kan ta bort böcker från varukorgen
 
 Feature: Remove book
     ******  User remove book from list   ******

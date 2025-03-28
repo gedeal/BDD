@@ -4,18 +4,26 @@ Här kommer du behöva tänka till och forska på egen hand. Du skall vidareutve
 uppgiften till att inkludera ytterligare funktionalitet samt några svårare testfall.
 Extra krav som skall implementeras (du skall göra minst tre av dem):
 
-- Rabattfunktion. Om användaren köper fler än tre böcker skall hon få 10% rabatt
+- F002_1) Rabattfunktion. Om användaren köper fler än tre böcker skall hon få 10% rabatt
 på hela kundkorgen. Testa flera olika fall, inklusive värden som är osannolika som
 -1000 och 64000 böcker.
-- Lagerhantering. Varje bok skall ha en lagerstatus. Om användaren försöker köpa
+
+
+- F002_2) Lagerhantering. Varje bok skall ha en lagerstatus. Om användaren försöker köpa
 fler exemplar än vad som finns i lagret, visas ett tydligt meddelande och antalet
 begränsas till lagersaldot.
-- Login. Användaren måste logga in med giltiga användaruppgifter innan köpet kan
+
+
+- F002_3) Login. Användaren måste logga in med giltiga användaruppgifter innan köpet kan
 genomföras. Testa både lyckade och misslyckade inloggingar med Scenario
 Outline.
-- Beställningshistorik. Användaren skall kunna se historiken över sina tidigare
+
+
+- F002_4) Beställningshistorik. Användaren skall kunna se historiken över sina tidigare
 beställningar. Testa att beställningar visas korrekt.
-- Kvitto. När en beställning är genomförd skickas ett kvitto automatiskt via e-post
+
+
+- F002_5) Kvitto. När en beställning är genomförd skickas ett kvitto automatiskt via e-post
 (detta simulerar du i Python, du behöver inte skicka mailet på riktigt). Testa att
 kvittot skapas och skickas iväg.
 

@@ -2,12 +2,20 @@
 Du ska beskriva och testa ett enkelt system för en webbutik som säljer böcker. 
 Systemet har följande enkla krav:
 
-- F001 - Användaren kan lägga böcker i en varukorg
-- F002 - Användaren kan ta bort böcker från varukorgen
-- F003 - Varukorgen visar alltid aktuell summa och antal böcker
-- F004 - Om användaren försöker lägga en bok som redan finns i varukorgen ska antalet
+- F001_1 ) Användaren kan lägga böcker i en varukorg
+
+
+- F001_2 ) Användaren kan ta bort böcker från varukorgen
+
+
+- F001_3 ) Varukorgen visar alltid aktuell summa och antal böcker
+
+
+- F001_4 ) Om användaren försöker lägga en bok som redan finns i varukorgen ska antalet
 av just den boken öka istället för att skapa en ny rad
-- F005 -Det skall gå att tömma varukorgen helt
+
+
+- F001_5 ) Det skall gå att tömma varukorgen helt
 
 ### Uppgiften:
 1. Skriv tydliga scenarier i Gherkin som beskriver ovanstående krav. Använd gärna
