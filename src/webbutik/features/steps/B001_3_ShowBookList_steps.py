@@ -4,62 +4,49 @@ from playwright.sync_api import expect
 booklist=['Moby Dick', 'No mans land', 'Oz', '123 Olive']
 
 
-def book_list (booklist, booksnr):
+
+def book_list (booklist):
     correct_book = booklist
-    correct_nrbooks = 4
-    # print(f'correct nr books:  {correct_nrbooks}')
-    return booklist == correct_book and correct_nrbooks == booksnr
+    correct_nrbooks = len(booklist)
+    return booklist == correct_book and correct_nrbooks >0
 
-def read_basket():
+def books_in_basket(booklist):
+    context_qt = len(booklist)
+    print(f'User has {context_qt} books in basket')
+    if context_qt > 0 :
+        return True
+    else:
+        return False
 
-    return True
-
-def remove_book(booklist, booksnr):
+def show_basket(booklist):
     correct_book = booklist
-    correct_book.pop(1)
-    correct_nrbooks = len(correct_book)
-    print('Remove book --------------')
-    return correct_nrbooks == booksnr-1
-
+    return correct_book
 
 # ------------------------------------------------------------------------
+@given(u'User has books in basket list')
+def step_basket_has_books(context):
+    context_book= booklist
+    context_qt = len(booklist)
+    print(f'GIVEN: User has books in basket')
+    context_check_basket = books_in_basket(context_book)
+    assert context_check_basket == True , "Books and nr are wrong :-("
 
-# @given(u'User control books in list')
-# def step_choose_book_list(context):
-#     context_book= booklist
-#     context_qt = len(context_book)
-#     print('GIVEN: User control books in list')
-#     print(f"User has  {context_qt}  books")
-#     print(f"User has these books:  {context_book} ")
-#     context_check_book_list = book_list(context_book, context_qt)
-#     assert context_check_book_list == True , "Books and nr are wrong :-("
-#
-#
-# @when(u'User asks for the book list')
-# def step_remove_book(context):
-#     context_book= booklist
-#     context_qt = len(context_book)
-#     print('WHEN: User control books in list')
-#     print(f"User has chosen book {context_book}")
-#     context_check_book_list = remove_book(context_book, context_qt)
-#
-#     assert context_check_book_list == True , "Books and nr are wrong :-("
+@when(u'User asks to see the basket')
+def step_ask_to_see_basket(context):
+    context_book= booklist
+    print('\nWhen: User asks to see the basket\n')
+    context_check_book_list = book_list(context_book)
+    assert context_check_book_list == True , "Books and nr are wrong :-("
 
+@then(u'Book basket list and total is show')
+def show_books_in_basket(context):
+    context_book = booklist
+    print('When: Basket shows')
+    context_check_basket = show_basket(context_book)
+    # assert len(context_check_basket) == 0 , "No books in basket :-("
+    assert len(context_check_basket) > 0 , "No books in basket :-("
+    print(f"User has these books:  {context_check_basket} \n")
 
-# @when(u'User asks for the total nr of books in list')
-# def step_remove_book(context):
-#     context_book= booklist
-#     context_qt = len(context_book)
-#     print(f"User has chosen book {context_book}")
-
-
-#
-# @then(u'Book list and total shows')
-# def step_book_removed(context):
-#     context_book= booklist
-#     context_qt = len(context_book)
-#     print(f"User has chosen book {context_book}")
-
-
-# step_choose_book_list(booklist)
-# step_remove_book(booklist)
+step_basket_has_books(booklist)
+step_ask_to_see_basket(booklist)
+show_books_in_basket(booklist)

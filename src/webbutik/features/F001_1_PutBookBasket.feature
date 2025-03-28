@@ -1,4 +1,4 @@
-#- F001 - Användaren kan lägga böcker i en varukorg
+#-F001_1 ) Användaren kan lägga böcker i en varukorg
 
 Feature: Add book
     *****  User can put a book in the basket  ******
