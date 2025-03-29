@@ -1,5 +1,3 @@
-from difflib import context_diff
-
 from behave import given, when, then
 from playwright.sync_api import expect
 
@@ -47,7 +45,7 @@ def check_book_change(basket,book,qtd):
         if row[0] == book:
             print('FOUND BOOK: ', row[0])
             if row[1] != qtd:
-                # print(' ',row[1],' != ', qtd)
+                print(' ',row[1],' != ', qtd)
                 return True
     return False
 
@@ -90,6 +88,8 @@ def step_total_has_changed(context):
     assert context_total_change == True , "Total has not changed :-("
 
 
+#------------------------------------------------------------------------
+print ('\n***** F001_4 ) Om användaren försöker lägga en bok som redan finns i varukorgen ska antalet')
 step_basket_has_books(booklist)
 step_add_same_book(booklist)
 step_basket_does_not_change(booklist)

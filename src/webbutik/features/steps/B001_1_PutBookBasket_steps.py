@@ -32,3 +32,8 @@ def step_show_basket(context):
     # with open('string_data.json', 'w') as file:
     #     file.write(json_string)
     print("User has chosen book")
+
+
+
+#------------------------------------------------------------------------
+print ('\n***** F001_1 ) Användaren kan lägga böcker i en varukorg')
