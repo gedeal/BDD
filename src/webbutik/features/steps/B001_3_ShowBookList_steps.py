@@ -47,6 +47,9 @@ def show_books_in_basket(context):
     assert len(context_check_basket) > 0 , "No books in basket :-("
     print(f"User has these books:  {context_check_basket} \n")
 
+
+#------------------------------------------------------------------------
+print ('\n***** F001_3 ) Varukorgen visar alltid aktuell summa och antal böcker')
 step_basket_has_books(booklist)
 step_ask_to_see_basket(booklist)
 show_books_in_basket(booklist)

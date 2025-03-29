@@ -44,7 +44,7 @@ def step_book_removed(context):
     assert 'No mans land' not in booklist
 
 
-
-# step_choose_book('1')
-# step_remove_book('c')
-# step_book_removed('')
+#------------------------------------------------------------------------
+print ('\n***** F001_2 ) Användaren kan ta bort böcker från varukorgen')
+step_choose_book('1')
+step_remove_book('c')
